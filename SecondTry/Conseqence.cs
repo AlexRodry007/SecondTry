@@ -9,16 +9,16 @@ namespace SecondTry
 {
     public partial class Conseqence
     {
-        public string ConsName { get; set; }
         [Display(Name = "Название последствия")]
-        public int? ConsValue { get; set; }
+        public string ConsName { get; set; }
         [Display(Name = "Значение последствия")]
-        public int? ItemUse { get; set; }
+        public int? ConsValue { get; set; }
         [Display(Name = "Использование предмета")]
-        public int? UseName { get; set; }
+        public int? ItemUse { get; set; }
         [Display(Name = "Название использование")]
-        public int? Choise { get; set; }
+        public int? UseName { get; set; }
         [Display(Name = "Выбор")]
+        public int? Choise { get; set; }
 
         public virtual Choice ChoiseNavigation { get; set; }
         public virtual Use UseNameNavigation { get; set; }

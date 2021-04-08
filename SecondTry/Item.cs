@@ -16,16 +16,16 @@ namespace SecondTry
             Uses = new HashSet<Use>();
         }
 
-        public int Id { get; set; }
         [Display(Name = "ID")]
-        public string ItemName { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Название предмета")]
-        public string Description { get; set; }
+        public string ItemName { get; set; }
         [Display(Name = "Описание")]
-        public int? Mass { get; set; }
+        public string Description { get; set; }
         [Display(Name = "Масса")]
-        public int? Volume { get; set; }
+        public int? Mass { get; set; }
         [Display(Name = "Объём")]
+        public int? Volume { get; set; }
 
         public virtual ICollection<Character> Characters { get; set; }
         public virtual ICollection<PassiveUse> PassiveUses { get; set; }

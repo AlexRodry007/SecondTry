@@ -13,10 +13,10 @@ namespace SecondTry
             Hikes = new HashSet<Hike>();
         }
 
-        public int Id { get; set; }
         [Display(Name = "Id")]
-        public string Coords { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Координаты")]
+        public string Coords { get; set; }
 
         public virtual MapX CoordsNavigation { get; set; }
         public virtual Hike IdNavigation { get; set; }

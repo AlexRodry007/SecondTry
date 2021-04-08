@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\repos\\SecondTry\\SecondTry\\SecondTry.csproj": {}
+    "D:\\MY PROJECT\\HikeMaster\\SecondTry\\SecondTry.csproj": {}
   },
   "projects": {
-    "D:\\source\\repos\\SecondTry\\SecondTry\\SecondTry.csproj": {
+    "D:\\MY PROJECT\\HikeMaster\\SecondTry\\SecondTry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\repos\\SecondTry\\SecondTry\\SecondTry.csproj",
+        "projectUniqueName": "D:\\MY PROJECT\\HikeMaster\\SecondTry\\SecondTry.csproj",
         "projectName": "SecondTry",
-        "projectPath": "D:\\source\\repos\\SecondTry\\SecondTry\\SecondTry.csproj",
-        "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\repos\\SecondTry\\SecondTry\\obj\\",
+        "projectPath": "D:\\MY PROJECT\\HikeMaster\\SecondTry\\SecondTry.csproj",
+        "packagesPath": "C:\\Users\\Vasyl\\.nuget\\packages\\",
+        "outputPath": "D:\\MY PROJECT\\HikeMaster\\SecondTry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vasyl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

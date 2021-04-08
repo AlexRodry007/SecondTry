@@ -8,12 +8,12 @@ namespace SecondTry
 {
     public partial class Action
     {
-        public int ActionValue { get; set; }
         [Display(Name = "Значение действия")]
-        public string ActionName { get; set; }
+        public int ActionValue { get; set; }
         [Display(Name = "Название действия")]
-        public int? Tactic { get; set; }
+        public string ActionName { get; set; }
         [Display(Name = "Тактика")]
+        public int? Tactic { get; set; }
 
         public virtual Tactic TacticNavigation { get; set; }
     }

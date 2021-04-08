@@ -13,12 +13,12 @@ namespace SecondTry
             Paths = new HashSet<Path>();
         }
 
-        public string YX { get; set; }
         [Display(Name = "YX")]
-        public int? Y { get; set; }
+        public string YX { get; set; }
         [Display(Name = "Y")]
-        public int? X { get; set; }
+        public int? Y { get; set; }
         [Display(Name = "X")]
+        public int? X { get; set; }
 
         public virtual MapY YNavigation { get; set; }
         public virtual Tile Tile { get; set; }

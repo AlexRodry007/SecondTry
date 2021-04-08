@@ -13,14 +13,14 @@ namespace SecondTry
             Characters = new HashSet<Character>();
         }
 
-        public int Id { get; set; }
         [Display(Name = "Id")]
-        public string TacticName { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Название тактики")]
-        public string TacticValue { get; set; }
+        public string TacticName { get; set; }
         [Display(Name = "Значение тактики")]
-        public int? Fight { get; set; }
+        public string TacticValue { get; set; }
         [Display(Name = "Бой")]
+        public int? Fight { get; set; }
 
         public virtual Fight FightNavigation { get; set; }
         public virtual ICollection<Action> Actions { get; set; }

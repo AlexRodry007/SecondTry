@@ -13,14 +13,14 @@ namespace SecondTry
             Events = new HashSet<Event>();
         }
 
-        public string Coords { get; set; }
         [Display(Name = "Координаты")]
-        public int? Id { get; set; }
+        public string Coords { get; set; }
         [Display(Name = "Id")]
-        public string TileName { get; set; }
+        public int? Id { get; set; }
         [Display(Name = "Название клетки")]
-        public int? Length { get; set; }
+        public string TileName { get; set; }
         [Display(Name = "Длина")]
+        public int? Length { get; set; }
 
         public virtual MapX CoordsNavigation { get; set; }
         public virtual ICollection<Event> Events { get; set; }
