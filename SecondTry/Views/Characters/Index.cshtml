@@ -1,0 +1,443 @@
+﻿@model IEnumerable<SecondTry.Character>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Side)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxHealth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NowHealth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxEnergy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NowEnergy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxSatiety)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NowSatiety)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxSanity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NowSanity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeavyWeapone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceGather)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carrying)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HandToHand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bruteforce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dexterity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LightWeapone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RangedWeapone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sneak)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dodge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agility)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Constitution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shield)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Armour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stamina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Health)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Intelligence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MagickPower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medicine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cooking)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Science)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Craft)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Memory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Willpower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MagickLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Languages)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Learning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Logistics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perception)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hunting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Traps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foraging)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spotting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pathfinding)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Charisma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Persuation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Intimidation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Music)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discussion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Leadership)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Command)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tactic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strategy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Survival)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adjutant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epathy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LieDetector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Psycology)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pacification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalHandling)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BattleTacticNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HikeNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeaponeNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Side)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxHealth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NowHealth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxEnergy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NowEnergy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxSatiety)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NowSatiety)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxSanity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NowSanity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeavyWeapone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceGather)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carrying)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HandToHand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bruteforce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dexterity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LightWeapone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RangedWeapone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sneak)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dodge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agility)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Constitution)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shield)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Armour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stamina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Health)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Balance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intelligence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagickPower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medicine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cooking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Science)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Craft)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Willpower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagickLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Languages)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Learning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logistics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Perception)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hunting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Traps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foraging)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Spotting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pathfinding)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Charisma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Persuation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intimidation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Music)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discussion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Leadership)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Command)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tactic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strategy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Survival)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adjutant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epathy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LieDetector)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Psycology)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pacification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalHandling)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BattleTacticNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HikeNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeaponeNavigation.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TrueId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TrueId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TrueId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

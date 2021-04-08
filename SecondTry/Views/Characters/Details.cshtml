@@ -1,0 +1,432 @@
+﻿@model SecondTry.Character
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Character</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Side)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Side)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaxHealth)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaxHealth)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NowHealth)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NowHealth)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaxEnergy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaxEnergy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NowEnergy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NowEnergy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaxSatiety)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaxSatiety)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NowSatiety)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NowSatiety)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaxSanity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaxSanity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NowSanity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NowSanity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Strength)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Strength)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HeavyWeapone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HeavyWeapone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResourceGather)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResourceGather)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Carrying)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Carrying)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HandToHand)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HandToHand)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bruteforce)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bruteforce)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dexterity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dexterity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LightWeapone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LightWeapone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RangedWeapone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RangedWeapone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sneak)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sneak)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dodge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dodge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Agility)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Agility)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Constitution)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Constitution)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Shield)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Shield)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Armour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Armour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stamina)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stamina)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Health)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Health)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Intelligence)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Intelligence)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MagickPower)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MagickPower)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Medicine)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Medicine)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cooking)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cooking)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Science)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Science)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Craft)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Craft)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Memory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Memory)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Willpower)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Willpower)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MagickLevel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MagickLevel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Languages)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Languages)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Learning)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Learning)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Logistics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Logistics)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Perception)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Perception)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Hunting)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hunting)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Traps)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Traps)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Foraging)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Foraging)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Spotting)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Spotting)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pathfinding)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pathfinding)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Charisma)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Charisma)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Persuation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Persuation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Intimidation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Intimidation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Trade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Trade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Music)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Music)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Discussion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Discussion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Leadership)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Leadership)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Command)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Command)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tactic)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tactic)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Strategy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Strategy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Survival)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Survival)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Adjutant)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Adjutant)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Epathy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Epathy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lie)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LieDetector)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LieDetector)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Psycology)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Psycology)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pacification)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pacification)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnimalHandling)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnimalHandling)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BattleTacticNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BattleTacticNavigation.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HikeNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HikeNavigation.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WeaponeNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WeaponeNavigation.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TrueId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
