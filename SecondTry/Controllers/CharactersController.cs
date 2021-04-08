@@ -43,8 +43,7 @@ namespace SecondTry.Controllers
                 return NotFound();
             }
 
-            //return View(character);
-            return RedirectToAction("Index", "Hike", new { id = character.Id, hike = character.Hike });
+            return View(character);
         }
 
         // GET: Characters/Create

@@ -41,7 +41,8 @@ namespace SecondTry.Controllers
                 return NotFound();
             }
 
-            return View(hike);
+            //return View(hike);
+            return RedirectToAction("Index", "Character", new { id = hike.Id, name = hike.HikeName });
         }
 
         // GET: Hikes/Create
