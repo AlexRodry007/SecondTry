@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Добавление в поход @ViewBag.HikeName</h1>
 
 <h4>Character</h4>
 <hr />
@@ -13,27 +13,21 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="TrueId" class="control-label"></label>
-                <input asp-for="TrueId" class="form-control" />
-                <span asp-validation-for="TrueId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Weapone" class="control-label"></label>
-                <select asp-for="Weapone" class ="form-control" asp-items="ViewBag.Weapone"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Hike" class="control-label"></label>
-                <select asp-for="Hike" class ="form-control" asp-items="ViewBag.Hike"></select>
+                <select asp-for="Weapone" class="form-control" asp-items="ViewBag.Weapone"></select>
+                <span asp-validation-for="Weapone" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="BattleTactic" class="control-label"></label>
-                <select asp-for="BattleTactic" class ="form-control" asp-items="ViewBag.BattleTactic"></select>
+                <select asp-for="BattleTactic" class="form-control" asp-items="ViewBag.BattleTactic"></select>
+                <span asp-validation-for="BattleTactic" class="text-danger"></span>
             </div>
+            <input type="hidden" value="@ViewBag.HikeId" name="hike"/>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

@@ -8,9 +8,8 @@ namespace SecondTry
 {
     public partial class Character
     {
-        [Required(ErrorMessage = "Обязательно поле")]
-        [Display(Name = "Истинное ID")]
         public int TrueId { get; set; }
+        [Required(ErrorMessage = "Обязательно поле")]
         [Display(Name = "Имя")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Обязательно поле")]

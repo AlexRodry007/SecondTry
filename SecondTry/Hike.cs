@@ -13,7 +13,7 @@ namespace SecondTry
         {
             Characters = new HashSet<Character>();
         }
-
+        //Test change
        // [Display(Name = "ID")]
         public int Id { get; set; }
         [Display(Name = "Название похода")]
