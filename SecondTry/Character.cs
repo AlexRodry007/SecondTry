@@ -9,11 +9,10 @@ namespace SecondTry
     public partial class Character
     {
         public int TrueId { get; set; }
-        /*[Required(ErrorMessage = "Обязательно поле")]
-        [Display(Name = "Истинное ID")]*/
         [Required(ErrorMessage = "Обязательно поле")]
         [Display(Name = "Имя")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "Обязательно поле")]
         [Display(Name = "Сторона")]
         public int? Side { get; set; }
         [Display(Name = "ID")]

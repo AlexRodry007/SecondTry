@@ -13,8 +13,8 @@ namespace SecondTry
             MapXes = new HashSet<MapX>();
         }
 
-        public int Y { get; set; }
         [Display(Name = "Y")]
+        public int Y { get; set; }
 
         public virtual ICollection<MapX> MapXes { get; set; }
     }

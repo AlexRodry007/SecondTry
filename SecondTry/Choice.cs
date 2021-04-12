@@ -14,12 +14,12 @@ namespace SecondTry
             Fights = new HashSet<Fight>();
         }
 
-        public int Id { get; set; }
         [Display(Name = "ID")]
-        public string Description { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Описание")]
-        public int? Event { get; set; }
+        public string Description { get; set; }
         [Display(Name = "Событие")]
+        public int? Event { get; set; }
 
         public virtual Event EventNavigation { get; set; }
         public virtual ICollection<Conseqence> Conseqences { get; set; }

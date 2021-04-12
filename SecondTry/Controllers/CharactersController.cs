@@ -19,9 +19,16 @@ namespace SecondTry.Controllers
         }
 
         // GET: Characters
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id, string? name)
         {
-            var lab1Context = _context.Characters.Include(c => c.BattleTacticNavigation).Include(c => c.HikeNavigation).Include(c => c.WeaponeNavigation);
+            if(id == null)
+            {
+                return RedirectToAction("Hikes", "Index");
+            }
+            ViewBag.HikeId = id;
+            ViewBag.HikeName = name;
+            //var lab1Context = _context.Characters.Include(c => c.BattleTacticNavigation).Include(c => c.HikeNavigation).Include(c => c.WeaponeNavigation);
+            var lab1Context = _context.Characters.Where(b => b.Hike == id).Include(b => b.HikeNavigation);
             return View(await lab1Context.ToListAsync());
         }
 
@@ -47,11 +54,13 @@ namespace SecondTry.Controllers
         }
 
         // GET: Characters/Create
-        public IActionResult Create()
+        public IActionResult Create(int hikeId)
         {
-            ViewData["BattleTactic"] = new SelectList(_context.Tactics, "Id", "Id");
-            ViewData["Hike"] = new SelectList(_context.Hikes, "Id", "Id");
-            ViewData["Weapone"] = new SelectList(_context.Items, "Id", "Id");
+            //ViewData["BattleTactic"] = new SelectList(_context.Tactics, "Id", "Id");
+            //ViewData["Hike"] = new SelectList(_context.Hikes, "Id", "Id");
+            ViewBag.HikeId = hikeId;
+            ViewBag.HikeName = _context.Hikes.Where(c => c.Id == hikeId).FirstOrDefault().HikeName;
+            //ViewData["Weapone"] = new SelectList(_context.Items, "Id", "Id");
             return View();
         }
 
@@ -60,18 +69,23 @@ namespace SecondTry.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TrueId,Name,Side,Id,MaxHealth,NowHealth,MaxEnergy,NowEnergy,MaxSatiety,NowSatiety,MaxSanity,NowSanity,Status,Strength,HeavyWeapone,ResourceGather,Carrying,HandToHand,Bruteforce,Dexterity,LightWeapone,RangedWeapone,Sneak,Dodge,Agility,Constitution,Shield,Armour,Stamina,Health,Balance,Intelligence,MagickPower,Medicine,Cooking,Science,Craft,Memory,Willpower,MagickLevel,Languages,Learning,Logistics,Perception,Hunting,Traps,Foraging,Spotting,Pathfinding,Charisma,Persuation,Intimidation,Trade,Music,Discussion,Leadership,Command,Tactic,Strategy,Survival,Adjutant,Epathy,Lie,LieDetector,Psycology,Pacification,AnimalHandling,Weapone,Hike,BattleTactic")] Character character)
+        public async Task<IActionResult> Create(int hike, [Bind("TrueId,Name,Side,Id,MaxHealth,NowHealth,MaxEnergy,NowEnergy,MaxSatiety,NowSatiety,MaxSanity,NowSanity,Status,Strength,HeavyWeapone,ResourceGather,Carrying,HandToHand,Bruteforce,Dexterity,LightWeapone,RangedWeapone,Sneak,Dodge,Agility,Constitution,Shield,Armour,Stamina,Health,Balance,Intelligence,MagickPower,Medicine,Cooking,Science,Craft,Memory,Willpower,MagickLevel,Languages,Learning,Logistics,Perception,Hunting,Traps,Foraging,Spotting,Pathfinding,Charisma,Persuation,Intimidation,Trade,Music,Discussion,Leadership,Command,Tactic,Strategy,Survival,Adjutant,Epathy,Lie,LieDetector,Psycology,Pacification,AnimalHandling,Weapone,Hike,BattleTactic")] Character character)
         {
+            character.Hike = hike;
+            character.BattleTactic = 0;
+            character.Weapone = 0;
             if (ModelState.IsValid)
             {
                 _context.Add(character);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Characters", new { id = hike, name = _context.Hikes.Where(c => c.Id == hike).FirstOrDefault().HikeName });
             }
-            ViewData["BattleTactic"] = new SelectList(_context.Tactics, "Id", "Id", character.BattleTactic);
-            ViewData["Hike"] = new SelectList(_context.Hikes, "Id", "Id", character.Hike);
-            ViewData["Weapone"] = new SelectList(_context.Items, "Id", "Id", character.Weapone);
-            return View(character);
+            //ViewData["BattleTactic"] = new SelectList(_context.Tactics, "Id", "Id", character.BattleTactic);
+            //ViewData["Hike"] = new SelectList(_context.Hikes, "Id", "Id", character.Hike);
+            //ViewData["Weapone"] = new SelectList(_context.Items, "Id", "Id", character.Weapone);
+            //return View(character);
+            return RedirectToAction("Index", "Characters", new { id = hike, name = _context.Hikes.Where(c => c.Id == hike).FirstOrDefault().HikeName });
         }
 
         // GET: Characters/Edit/5

@@ -42,7 +42,7 @@ namespace SecondTry.Controllers
             }
 
             //return View(hike);
-            return RedirectToAction("Index", "Character", new { id = hike.Id, name = hike.HikeName });
+            return RedirectToAction("Index", "Items", new { id = hike.Id, name = hike.HikeName });
         }
 
         // GET: Hikes/Create

@@ -13,14 +13,14 @@ namespace SecondTry
             Conseqences = new HashSet<Conseqence>();
         }
 
-        public int Id { get; set; }
         [Display(Name = "Id")]
-        public string UseName { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Название использования")]
-        public string Consumable { get; set; }
+        public string UseName { get; set; }
         [Display(Name = "Расходный материал")]
-        public int? Item { get; set; }
+        public string Consumable { get; set; }
         [Display(Name = "Предмет")]
+        public int? Item { get; set; }
 
         public virtual Item ItemNavigation { get; set; }
         public virtual ICollection<Conseqence> Conseqences { get; set; }
